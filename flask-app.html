@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OS Emulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="fade-out">
+
+<header>
+    <nav class="navbar">
+        <h1 class="logo">Marc.</h1>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="section dark">
+    <h2>Flask Data Visualization App</h2>
+
+    <p>
+        Interactive dashboard built with Flask and Plotly for analyzing cancer datasets.
+    </p>
+
+    <div class="about-block">
+        <h3>Features</h3>
+        <ul>
+            <li>Interactive charts</li>
+            <li>Choropleth maps</li>
+            <li>Data filtering system</li>
+        </ul>
+    </div>
+
+    <div class="about-block">
+        <h3>Tech Stack</h3>
+        <p>Python, Flask, Plotly, MongoDB</p>
+    </div>
+
+    <div class="about-block">
+        <h3>Links</h3>
+        <a class="btn" href="https://github.com/OldMarkie/DATA101---Data-Visualization-Dashboard-Project/tree/python_backend" target="_blank">
+            GitHub Repository
+        </a>
+    </div>
+
+    <a class="btn" href="index.html">← Back to Portfolio</a>
+</section>
+
+<script>
+    // Page fade-in on load
+    document.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.remove("fade-out");
+    });
+
+    // Intercept link clicks for fade-out transition
+    document.querySelectorAll("a").forEach(link => {
+        const target = link.getAttribute("href");
+
+        // Only apply to internal links (not external or blank target)
+        if (target && !target.startsWith("http") && !link.hasAttribute("target")) {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                document.body.classList.add("fade-out");
+
+                setTimeout(() => {
+                    window.location.href = target;
+                }, 400);
+            });
+        }
+    });
+</script>
+
+
+
+</body>
+</html>

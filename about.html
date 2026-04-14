@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Marc Tasarra</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="fade-out">
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Marc.</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Content -->
+        <section class="section">
+            <h2 class="hidden">About Me</h2>
+
+            <!-- Education -->
+            <div class="about-block hidden">
+        <h3>Education</h3>
+
+        <div class="edu-item">
+            <p><strong>De La Salle University - Manila</strong></p>
+            <p>Bachelor of Computer Science Major in Software Technology</p>
+            <p>September 2021 – February 2026</p>
+        </div>
+
+        <div class="edu-item">
+            <p><strong>Senior High School Within Bacoor Elementary School</strong></p>
+            <p>Senior High School</p>
+            <p>2019 – 2021</p>
+        </div>
+
+        <div class="edu-item">
+            <p><strong>Young Shepherd’s School</strong></p>
+            <p>Junior High School</p>
+            <p>2015 – 2019</p>
+        </div>
+</div>
+        <!-- Experience -->
+        <div class="about-block hidden delay-1">
+            <h3>Experience</h3>
+            <p><strong>PM/QA Intern</strong></p>
+            <p>SD Solutions Outsourcing Inc.</p>
+            <p>July 2025 – December 2025</p>
+        </div>
+
+        <!-- Achievements -->
+        <div class="about-block hidden delay-2">
+            <h3>Achievements</h3>
+                <p>DOST Scholarship (RA 7687) - 2021</p>
+                <p>Gawad Lasalyano Recipient - 2024</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Marc Tasarra</p>
+    </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach(el => observer.observe(el));
+    </script>
+
+    <script>
+    // Page fade-in on load
+    document.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.remove("fade-out");
+    });
+
+    // Intercept link clicks for fade-out transition
+    document.querySelectorAll("a").forEach(link => {
+        const target = link.getAttribute("href");
+
+        // Only apply to internal links (not external or blank target)
+        if (target && !target.startsWith("http") && !link.hasAttribute("target")) {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                document.body.classList.add("fade-out");
+
+                setTimeout(() => {
+                    window.location.href = target;
+                }, 400);
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

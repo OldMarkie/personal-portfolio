@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc Tasarra | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="fade-out">
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Marc.</h1>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="profile.jpg" alt="Marc Tasarra">
+            <h2>Marc Lowell Anthony Tasarra</h2>
+            <p>Computer Science Graduate</p>
+            <a href="#projects" class="btn">View Projects</a>
+        </div>
+
+        <a href="#about" class="scroll-indicator">
+        <span></span>
+        <span></span>
+        </a>
+
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section hidden">
+        <h2>About Me</h2>
+        <p>
+            Computer Science graduate specializing in Software Technology with hands-on experience in developing web, mobile, and system-level applications. Proficient in languages such as Java, Python, C, and SQL, with a strong foundation in software design, data structures, and problem-solving.
+        </p>
+
+        <p>
+            Experienced in building practical applications including data visualization systems, Android-based solutions, and system simulations. Demonstrates the ability to design efficient, scalable, and maintainable code while working with modern development tools and frameworks.
+        </p>
+
+        <p>
+            Highly motivated to continuously learn and adapt to new technologies, with a strong interest in software engineering, application development, and data-driven solutions. Seeking opportunities to contribute technical skills and grow as a developer in a professional environment.
+        </p>
+
+        <a href="#skills" class="scroll-indicator">
+        <span></span>
+        <span></span>
+        </a>
+
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section dark hidden">
+    <h2>Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-group">
+            <h3>Programming Languages</h3>
+            <div class="skill-items">
+                <div class="skill">C <span>Intermediate</span></div>
+                <div class="skill">Python <span>Intermediate</span></div>
+                <div class="skill">Java <span>Intermediate</span></div>
+                <div class="skill">R <span>Beginner</span></div>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <h3>Web & Database</h3>
+            <div class="skill-items">
+                <div class="skill">HTML/CSS <span>Intermediate</span></div>
+                <div class="skill">MySQL <span>Intermediate</span></div>
+                <div class="skill">MongoDB <span>Intermediate</span></div>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <h3>Tools & Others</h3>
+            <div class="skill-items">
+                <div class="skill">Photoshop <span>Intermediate</span></div>
+                <div class="skill">Video Editing <span>Intermediate</span></div>
+            </div>
+        </div>
+
+    </div>
+
+    <a href="#projects" class="scroll-indicator">
+        <span></span>
+        <span></span>
+        </a>
+
+</section>
+
+    <!-- Projects -->
+    <section id="projects" class="section hidden">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+
+            <a href="os-emulator.html" class="project-card hidden delay-1">
+                <h3>OS Emulator (C++)</h3>
+                <p>Process scheduler with memory management simulation.</p>
+            </a>
+
+            <a href="flask-app.html" class="project-card hidden delay-2">
+                <h3>Flask Data Visualization App</h3>
+                <p>Interactive cancer data dashboard using Plotly.</p>
+            </a>
+
+            <a href="android-event-manager.html" class="project-card hidden delay-3">
+                <h3>Android Event Manager</h3>
+                <p>Calendar app with SQLite and Google Maps integration.</p>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section dark contact-section">
+        <h2>Contact</h2>
+        <p>Email: mlatasarra@gmail.com</p>
+        <p>GitHub: <a href="https://github.com/OldMarkie" target="_blank">OldMarkie</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Marc Tasarra</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach(el => observer.observe(el));
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.remove("fade-out");
+
+            document.querySelectorAll("a").forEach(link => {
+                const target = link.getAttribute("href");
+
+                // ❌ Skip external links + anchor links (#section)
+                if (
+                    !target ||
+                    target.startsWith("http") ||
+                    target.startsWith("#") ||
+                    link.hasAttribute("target")
+                ) return;
+
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    document.body.classList.add("fade-out");
+
+                    setTimeout(() => {
+                        window.location.href = target;
+                    }, 400);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
