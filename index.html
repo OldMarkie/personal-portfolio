@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marc Tasarra | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body class="fade-out">
 
@@ -25,21 +26,17 @@
     <section class="hero">
         <div class="hero-content">
             <img src="profile.jpg" alt="Marc Tasarra">
-            <h2>Marc Lowell Anthony Tasarra</h2>
+            <h2>MARC LOWELL ANTHONY O. TASARRA</h2>
             <p>Computer Science Graduate</p>
             <a href="#projects" class="btn">View Projects</a>
         </div>
 
-        <a href="#about" class="scroll-indicator">
-        <span></span>
-        <span></span>
-        </a>
 
     </section>
 
     <!-- About -->
     <section id="about" class="section hidden">
-        <h2>About Me</h2>
+        <h2>ABOUT ME</h2>
         <p>
             Computer Science graduate specializing in Software Technology with hands-on experience in developing web, mobile, and system-level applications. Proficient in languages such as Java, Python, C, and SQL, with a strong foundation in software design, data structures, and problem-solving.
         </p>
@@ -52,16 +49,36 @@
             Highly motivated to continuously learn and adapt to new technologies, with a strong interest in software engineering, application development, and data-driven solutions. Seeking opportunities to contribute technical skills and grow as a developer in a professional environment.
         </p>
 
-        <a href="#skills" class="scroll-indicator">
-        <span></span>
-        <span></span>
-        </a>
 
     </section>
 
+    <!-- Experience -->
+<section id="experience" class="section hidden">
+    <h2>EXPERIENCES</h2>
+
+    <div class="skills-container">
+
+        <div class="about-block hidden delay-1">
+            <h3>PM/QA Intern</h3>
+            <p><strong>SD Solutions Outsourcing Inc.</strong></p>
+            <p>July 2025 – December 2025</p>
+
+            <ul>
+                <li>Identified and reported bugs in existing company and client systems</li>
+                <li>Tested and validated fixes implemented by developers</li>
+                <li>Assisted Project Managers by shadowing client meetings</li>
+                <li>Documented meeting discussions through detailed minutes</li>
+                <li>Participated in inter-departmental meetings and coordination</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
     <!-- Skills -->
-    <section id="skills" class="section dark hidden">
-    <h2>Skills</h2>
+    <section id="skills" class="section hidden">
+    <h2>SKILLS</h2>
 
     <div class="skills-container">
 
@@ -69,9 +86,11 @@
             <h3>Programming Languages</h3>
             <div class="skill-items">
                 <div class="skill">C <span>Intermediate</span></div>
+                <div class="skill">C++ <span>Intermediate</span></div>
                 <div class="skill">Python <span>Intermediate</span></div>
                 <div class="skill">Java <span>Intermediate</span></div>
                 <div class="skill">R <span>Beginner</span></div>
+                <div class="skill">Kotlin <span>Beginner</span></div>
             </div>
         </div>
 
@@ -79,8 +98,18 @@
             <h3>Web & Database</h3>
             <div class="skill-items">
                 <div class="skill">HTML/CSS <span>Intermediate</span></div>
+                <div class="skill">Node.js <span>Beginner</span></div>
+                <div class="skill">React <span>Beginner</span></div>
+                <div class="skill">JavaScript <span>Intermediate</span></div>
                 <div class="skill">MySQL <span>Intermediate</span></div>
                 <div class="skill">MongoDB <span>Intermediate</span></div>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <h3>Automation Testing</h3>
+            <div class="skill-items">
+                <div class="skill">Vue.js <span>Beginner</span></div>
             </div>
         </div>
 
@@ -94,40 +123,91 @@
 
     </div>
 
-    <a href="#projects" class="scroll-indicator">
-        <span></span>
-        <span></span>
-        </a>
 
 </section>
 
-    <!-- Projects -->
     <section id="projects" class="section hidden">
-        <h2>Projects</h2>
-        <div class="projects-grid">
+    <h2>PROJECTS</h2>
 
-            <a href="os-emulator.html" class="project-card hidden delay-1">
-                <h3>OS Emulator (C++)</h3>
-                <p>Process scheduler with memory management simulation.</p>
-            </a>
+    <div class="skills-container">
 
-            <a href="flask-app.html" class="project-card hidden delay-2">
-                <h3>Flask Data Visualization App</h3>
-                <p>Interactive cancer data dashboard using Plotly.</p>
-            </a>
+        <div class="skill-group">
 
-            <a href="android-event-manager.html" class="project-card hidden delay-3">
-                <h3>Android Event Manager</h3>
-                <p>Calendar app with SQLite and Google Maps integration.</p>
-            </a>
+            <h3>Systems</h3>
 
+            <div class="skill-items">
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        OS Emulator (C++)
+                        <span>Process scheduler & memory simulation</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>
+                            A C++ based OS simulation that includes process scheduling (FCFS / Round Robin)
+                            and memory management using first-fit allocation.
+                        </p>
+                        <a href="os-emulator.html">View Full Project →</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </section>
+
+        <div class="skill-group">
+
+            <h3>Web Applications</h3>
+
+            <div class="skill-items">
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Flask Data Visualization App
+                        <span>Interactive cancer dashboard</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>
+                            Flask-based dashboard using Plotly for cancer data visualization and analysis.
+                        </p>
+                        <a href="flask-app.html">View Full Project →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="skill-group">
+
+            <h3>Mobile</h3>
+
+            <div class="skill-items">
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        Android Event Manager
+                        <span>Calendar + Maps integration</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>
+                            Android event management app with SQLite storage and Google Maps location support.
+                        </p>
+                        <a href="android-event-manager.html">View Full Project →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</section>
 
     <!-- Contact -->
-    <section id="contact" class="section dark contact-section">
+    <section id="contact" class="section contact-section">
         <h2>Contact</h2>
         <p>Email: mlatasarra@gmail.com</p>
+        <p>Contact Number: (+63)968 879 6321</p>
         <p>GitHub: <a href="https://github.com/OldMarkie" target="_blank">OldMarkie</a></p>
     </section>
 
@@ -156,7 +236,7 @@
             document.querySelectorAll("a").forEach(link => {
                 const target = link.getAttribute("href");
 
-                // ❌ Skip external links + anchor links (#section)
+                //Skip external links + anchor links (#section)
                 if (
                     !target ||
                     target.startsWith("http") ||
@@ -174,6 +254,29 @@
                 });
             });
         });
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const items = document.querySelectorAll(".accordion-item");
+
+        items.forEach(item => {
+            const header = item.querySelector(".accordion-header");
+
+            header.addEventListener("click", () => {
+
+                // close others (accordion behavior)
+                items.forEach(i => {
+                    if (i !== item) {
+                        i.classList.remove("active");
+                    }
+                });
+
+                // toggle current
+                item.classList.toggle("active");
+            });
+        });
+    });
     </script>
 
 
